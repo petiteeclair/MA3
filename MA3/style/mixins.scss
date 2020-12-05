@@ -1,0 +1,108 @@
+//general formatting/colors
+.body {
+  background-color: $bgClr;
+}
+
+//grid layout and items
+//body grid
+@mixin bodyGrid {
+  //900px screen size 2 columns with items
+  @media screen and (min-width: $lgScreen) {
+    .bodyGrid {
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color: $grdClr;
+      padding: 10px;
+      grid-gap: 10px;
+    }
+
+    .header {
+      background-image: url($imgpath);
+      color: $hdrClr;
+      grid-column: 1 / span 2;
+      border: 5px solid $bdrClr;
+    }
+
+    .grid-item {
+      color: $paraFntClr;
+      font-family: $fontFam;
+      grid-column: 1 / span 1;
+      border: 5px solid $bdrClr;
+    }
+
+    //700px screen size 1 column
+    @media screen and (max-width: $mdScreen) {
+      .bodyGrid {
+        display: grid;
+        grid-template-columns: auto;
+        background-color: $grdClr;
+        padding: 10px;
+        grid-gap: 10px;
+      }
+    }
+
+    //400px screen size 1 column
+    @media screen and (max-width: $smScreen) {
+      .bodyGrid {
+        display: grid;
+        grid-template-columns: auto;
+        background-color: $grdClr;
+        padding: 10px;
+        grid-gap: 10px;
+      }
+    }
+  }
+  //footer grid
+  @mixin footerGrid {
+    //1000px screen size 2 columns with items
+    @media screen and (min-width: $lgScreen) {
+      .footerGrid {
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: $bgClr;
+        margin: 1000px;
+        padding: 10px;
+        grid-gap: 10px;
+      }
+
+      .header2 {
+        background-image: $imgpath;
+        color: $grdClr;
+        font-family: $fontFam;
+        grid-column: 1 / span 2;
+        border: 5px solid $bdrClr;
+      }
+
+      .grid-item {
+        color: black;
+        font-family: "Times New Roman", Times, serif;
+        grid-column: 1 / span 1;
+        border: 5px solid $bdrClr;
+      }
+    }
+
+    //700px screen size 1 column
+    @media screen and (max-width: $mdScreen) {
+      .footerGrid {
+        display: grid;
+        grid-template-columns: auto;
+        background-color: $bgClr;
+        margin: 600px;
+        padding: 10px;
+        grid-gap: 10px;
+      }
+    }
+
+    //400px screen size 1 column
+    @media screen and (max-width: $smScreen) {
+      .footerGrid {
+        display: grid;
+        grid-template-columns: auto;
+        background-color: $bgClr;
+        margin: 400px;
+        padding: 10px;
+        grid-gap: 10px;
+      }
+    }
+  }
+}

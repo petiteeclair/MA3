@@ -1,0 +1,9 @@
+//import files
+@import "variables";
+@import "mixins";
+
+//include the grids and other mixins
+//body grid
+@include bodyGrid;
+//footer grid
+@include footerGrid;
